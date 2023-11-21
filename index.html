@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Assignment-1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+        h1{
+            color: white;
+        }
+        .parent{
+            height: 80vh;
+            width: 70vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-template-areas: 
+            "a b c"
+            "a d d";
+            gap: 3px;
+        }
+        .child1{
+            height: auto;
+            width: auto;
+            display: flex;
+            align-items: left;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-left: 40px;
+            background-color: rgb(61, 57, 57);
+            grid-area: a;
+            gap: 10px;
+        }
+        .ab{
+            margin-top: 20px;
+        }
+        button{
+            height: 40px;
+            width: 50%;
+            font-size: 18px;
+            background-color: rgb(61, 57, 57);
+            outline: none;
+            border: 3px solid rgba(255, 255, 255, 0.836);
+            color: rgba(255, 255, 255, 0.836);
+            border-radius: 3px;
+        }
+        h1{
+            font-size: 36px;
+        }
+        a{
+            color: gray;
+        }
+        p{
+            width: 80%;
+            font-size: 22px;
+            line-height: 25px;
+            color: gray;
+        }
+        .child2{
+            height: auto;
+            width: auto;
+            background-image: url("images/cat\ seeing.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            grid-area: b;
+        }
+        .child3{
+            height: auto;
+            width: auto;
+            display: grid;
+            background-color: gray;
+            padding-left: 30px;
+            align-content: center;
+            justify-content: space-around;
+            grid-area: c;
+        }
+        .child4{
+            height: auto;
+            width: auto;
+            background-image: url("images/gray-cat-relaxing.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            grid-area: d;
+        }
+        .cat{
+            color: rgb(50, 44, 44)
+        }
+        @media screen and (min-width:375px) and (max-width: 864px)  {
+            .parent{
+                height: 80vh;
+                width: 80vw;
+                display: flex;
+                flex-flow: column wrap;
+            }
+            .child1{
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-around;
+                height: 30%;
+                width: 100%;
+            }
+            h1{
+                font-size: 18px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 11px;
+            }
+            .child2{
+                height: 20%;
+                width: 100%;
+                background-image: url("images/cat\ seeing.jpeg");
+                background-size: cover;
+                grid-area: b;
+            }
+            .child3{
+                height: 20%;
+                width: auto;
+                background-color: gray;
+                grid-area: c;
+            }
+            .child4{
+                height: 28%;
+                width: 100%;
+                background-image: url("images/gray-cat-relaxing.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                grid-area: d;
+            }
+            .cat{
+                font-size: 14px;
+                color: rgb(50, 44, 44)
+            }
+            button{
+                height: 15%;
+                width: 40%;
+                font-size: 10px;
+            }
+        }
+        @media screen and (min-width:865px) and (max-width: 1250px){
+        button{
+            width: 80%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">
+            <h1 class="ab">Cats</h1>
+            <p>Lorem ipsum dolor sit amet, Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, repellendus. adipisicing elit. Maiores iste, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, labore. facilis minus optio magni iure? Quae,  ipsum corruption.</p>
+            <p>Image from <a href="#">Freepik</a></p>
+            <button>LEARN MORE</button>
+        </div>
+        <div class="child2"></div>
+        <div class="child3">
+            <h1>Basic rules</h1>
+            <p class="cat">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, endis eum doloribus aut. Earum, sapiente. Ducimus nulla quod, impedit voluptatum laudantium dolor.</p>
+        </div>
+        <div class="child4"></div>
+    </div>
+</body>
+</html>
